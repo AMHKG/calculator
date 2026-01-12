@@ -1,0 +1,190 @@
+/* VARIABLES */
+
+:root {
+    --primary-dark: #171717;
+    --light-btn: #404040 ;
+    --dark-btn: #262626 ;
+    --orange-btn: #FF8904;
+    --red-btn: #F54927;
+    --white: #FAFAFA;
+}
+
+/* RESET */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* BODY */
+
+body {
+    min-height: 100vh;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background:
+        radial-gradient(ellipse 120% 70% at 70% 80%, rgba(87, 24, 69, 0.20), transparent 52%),
+        radial-gradient(ellipse 160% 45% at 30% 30%, rgba(153, 27, 27, 0.16), transparent 58%),
+        radial-gradient(ellipse 85% 100% at 10% 60%, rgba(69, 26, 3, 0.22), transparent 46%),
+        #1c1917
+}
+
+/* MAIN */
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    height: 600px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    background-color: var(--primary-dark);
+}
+
+.display-container {
+    width: 90%;
+    height: 50%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.display-history {
+    font-size: 18px; 
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #57534D;
+    border-radius: 5px 5px 0px 0px;
+    padding: 10px 0;
+    border-color: #404040;
+}
+
+.display-history::-webkit-scrollbar {
+    width: 5px;
+}
+
+.display-history::-webkit-scrollbar-thumb {
+    background: #404040;
+}
+
+.history-entry {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 10px;
+    padding: 5px 20px;
+    border-bottom: 1px solid #44403B;
+}
+
+.display-expression {
+    padding: 5px 15px;
+    font-size: 32px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow-x: auto;
+    background-color: #44403B;
+    border-radius: 0px 0px 5px 5px;
+    border-color: #404040;
+}
+
+hr {
+    border-color: #404040;
+}
+
+button {
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--white);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.buttons-container {
+    width: 90%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.light-btn {
+    background-color: var(--light-btn);
+}
+
+.light-btn:hover {
+  background-color: color-mix(in srgb, var(--light-btn), black 10%);
+}
+
+.dark-btn {
+    background-color: var(--dark-btn);
+}
+
+.dark-btn:hover {
+  background-color: color-mix(in srgb, var(--dark-btn), black 10%);
+}
+
+#clearBtn {
+    background-color: var(--orange-btn);
+    grid-column: span 2
+}
+
+#clearBtn:hover {
+  background-color: color-mix(in srgb, var(--orange-btn), black 10%);
+}
+
+#backspaceBtn {
+    background-color: var(--red-btn);
+    grid-column: span 2
+}
+
+#backspaceBtn:hover {
+    background-color: color-mix(in srgb, var(--red-btn), black 10%);
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 5vh;
+    text-align: center;
+    color: var(--light);
+}
+
+.github-logo {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.github-logo:hover {
+  transform: rotate(360deg) scale(1.2);
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <div class="calculator">
+            <div class="display-container">
+                <div class="display-history" id="displayHistory"></div>
+                <hr>
+                <div class="display-expression" id="displayExpression"></div>
+            </div>
+    
+            <div class="buttons-container">
+                <button id="clearBtn">C</button>
+                <button id="backspaceBtn">&#8592;</button>
+
+                <button class="light-btn" data-value="7">7</button>
+                <button class="light-btn" data-value="8">8</button>
+                <button class="light-btn" data-value="9">9</button>
+                <button class="dark-btn" data-value="/">&#247;</button>
+
+                <button class="light-btn" data-value="4">4</button>
+                <button class="light-btn" data-value="5">5</button>
+                <button class="light-btn" data-value="6">6</button>
+                <button class="dark-btn" data-value="*">&#215;</button>
+
+                <button class="light-btn" data-value="1">1</button>
+                <button class="light-btn" data-value="2">2</button>
+                <button class="light-btn" data-value="3">3</button>
+                <button class="dark-btn" data-value="-">-</button>
+
+                <button class="light-btn" data-value=".">.</button>
+                <button class="light-btn" data-value="0">0</button>
+                <button class="dark-btn" id="equalsBtn">=</button>
+                <button class="dark-btn" data-value="+">+</button>
+
+                
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Check out my code</p>
+        <a href="https://github.com/AMHKG/calculator" target="_blank">
+            <img class="github-logo" src="imgs/github-mark.svg"/>
+        </a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
