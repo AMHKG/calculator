@@ -173,10 +173,41 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
     height: 5vh;
     text-align: center;
-    color: var(--light);
+    color: var(--dark);
+}
+
+footer p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.built-by {
+    font-weight: 100;
+}
+
+.github-link, .source-link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+.source-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.source-link:hover .source-text {
+    text-decoration: underline;
 }
 
 .github-logo {
@@ -185,6 +216,6 @@ footer {
     transition: transform 0.3s ease-in-out;
 }
 
-.github-logo:hover {
-  transform: rotate(360deg) scale(1.2);
+.source-link:hover .github-logo {
+    transform: rotate(360deg) scale(1.2);
 }
